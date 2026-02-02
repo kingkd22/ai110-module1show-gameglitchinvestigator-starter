@@ -70,3 +70,27 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         return current_score - 5
 
     return current_score
+
+
+def initialize_game_state(difficulty: str):
+    """
+    Initialize a new game state with default values.
+    
+    Returns: dict with keys: attempts, score, status, history
+    """
+    return {
+        "attempts": 1,
+        "score": 0,
+        "status": "playing",
+        "history": []
+    }
+
+
+def reset_game_state(difficulty: str):
+    """
+    Reset game state for a new game.
+    Alias for initialize_game_state for clarity.
+    
+    Returns: dict with keys: attempts, score, status, history
+    """
+    return initialize_game_state(difficulty)
