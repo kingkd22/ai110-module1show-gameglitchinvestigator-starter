@@ -131,9 +131,13 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+# FIX: Ensure new game resets status to 'playing' using copilot suggestion
 if new_game:
-    st.session_state.attempts = 0
-    st.session_state.secret = random.randint(1, 100)
+    st.session_state.attempts = 1  # Reset to 1, not 0
+    st.session_state.secret = random.randint(low, high)  # Use difficulty range
+    st.session_state.score = 0  # Reset score
+    st.session_state.history = []  # Clear history
+    st.session_state.status = "playing"  # THIS IS THE KEY FIX
     st.success("New game started.")
     st.rerun()
 
