@@ -8,6 +8,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
 
+- When opening the game it was a clean and simple ui with no noticible ui bugs
+- When playing the game the hints continuously say either go lower or go higher even though the right score is in the oposite direction
+- The new game button does not work properly as well
+- When you change the difficulty the UI still reads "Guess a number between 1 and 100" even though the range changes
 ---
 
 ## 2. How did you use AI as a teammate?
