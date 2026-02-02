@@ -20,6 +20,9 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - Give one example of an AI suggestion you accepted and why.
 - Give one example of an AI suggestion you changed or rejected and why.
 
+- I used the VSCode Copilot
+- I used the AI to explain the logic of the code to be able to understand where the logic breaks
+- I rejected some of the refactoring code suggested by AI because it changed the business logic from app.py whihc worked perfectly
 ---
 
 ## 3. Debugging and testing your fixes
@@ -29,7 +32,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
----
+- I decided the bug was really fixed after running tests and manually testing the game 
+- I tested the check guess via py tests
+- AI helped design the tests to have a variety of test cases
+
 
 ## 4. What did you learn about Streamlit and state?
 
@@ -37,6 +43,9 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
 
+- The secret number kept changing because of how Streamlit handles reruns. Every time the user interacted with the app Streamlit would rerun the entire script
+- Imagine a recipe that you have to follow completely from start to finish every time someone asks you a question about cooking. Thats how streamlit works
+- The fix was the if "secret" not in st.session_state: cgeck. This condistional statement only genereates a new random number the very first time the app runs
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -45,3 +54,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+- One strategy I will use moving forward is allowing AI to explain code logic for me
+- One thing i would do differently is just letting AI make changes without reading
+- This project helped me be more aware of the code AI generates and how it fits in with project.
